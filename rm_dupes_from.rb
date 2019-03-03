@@ -78,7 +78,7 @@ files_to_check.each do |f|
   if File.file?(of) && File.file?(nf)
     begin
       fs = File.size(nf)
-      if Digest::MD5.file(of).to_s == Digest::MD5.file(nf).to_s
+      if (fs == File.size(of)) && (Digest::MD5.file(of).to_s == Digest::MD5.file(nf).to_s)
         pruneable[File.dirname(f)] = '?'
         File.delete(nf)
         size += fs
