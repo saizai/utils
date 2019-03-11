@@ -42,6 +42,10 @@ else
     puts "#{new} is not a directory." if !File.directory?(new)
     exit
   end
+  unless !File.identical? orig, new
+    puts "Arguments must be different directories"
+    exit
+  end
 end
 
 puts "Enumerating files by name..."
