@@ -15,9 +15,9 @@ entries_cidr = NetAddr.merge(entry_only)
 exits_cidr = NetAddr.merge(exit_only)
 dual_cidr = NetAddr.merge(dual)
 
-puts "Entry-only CIDRs"
+puts "\nEntry-only CIDRs"
 p entries_cidr
-puts "Exit-only CIDRs"
+puts "\nExit-only CIDRs"
 p exits_cidr
-puts "Entry/Exit CIDRs"
+puts "\nEntry/Exit CIDRs"
 p dual_cidr
